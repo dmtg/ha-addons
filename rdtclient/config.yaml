@@ -15,7 +15,7 @@ map:
   - share:rw
 volumes:      
   - /share/rtclient/downloads:/data/downloads # Make sure your local config directory exists
- environment:
+environment:
   TZ=Europe/Lisbon    
   PUID=3
   PGID=3
