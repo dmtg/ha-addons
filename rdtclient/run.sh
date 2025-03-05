@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Define paths for Homepage's data
-RDTCLIENT_CONFIG_PATH="/config"
+RDTCLIENT_CONFIG_PATH="/app"
 
 # Mapped directories from the host
 PERSISTENT_CONFIG_PATH="/share/rdtclient"
