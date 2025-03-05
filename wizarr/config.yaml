@@ -2,7 +2,7 @@ name: "wizarr"
 description: "wizarr integration for Home Assistant"
 url: https://github.com/dmtg/ha-addons/blob/main/wizarr/README.md
 webui: http://[HOST]:[PORT:5690]
-version: "0.03"
+version: "0.04"
 slug: "wizarr_addon"
 init: false
 arch:
