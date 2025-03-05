@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Define paths for Homepage's data
-HOMEPAGE_CONFIG_PATH="/app/config"
+WIZARR_CONFIG_PATH="/data/database"
 
 # Mapped directories from the host
-PERSISTENT_CONFIG_PATH="/share/homepage/configs"
+PERSISTENT_CONFIG_PATH="/share/wizarr/configs"
 
 # Ensure the persistent directories exist
 mkdir -p $PERSISTENT_CONFIG_PATH
@@ -12,20 +12,20 @@ mkdir -p $PERSISTENT_CONFIG_PATH
 # Function to sync data from Homepage's directories to persistent storage
 sync_to_persistent() {
     while true; do
-        cp -R $HOMEPAGE_CONFIG_PATH/* $PERSISTENT_CONFIG_PATH/ 2>/dev/null
+        cp -R $WIZARR_CONFIG_PATH/* $PERSISTENT_CONFIG_PATH/ 2>/dev/null
         sleep 60  # Sync every 60 seconds, adjust as needed
     done
 }
 
 # Sync data to Homepage's directories on startup
-cp -R $PERSISTENT_CONFIG_PATH/* $HOMEPAGE_CONFIG_PATH/ 2>/dev/null
+cp -R $PERSISTENT_CONFIG_PATH/* $WIZARR_CONFIG_PATH/ 2>/dev/null
 
 # Start continuous sync in the background
 sync_to_persistent &
 
 # Exporting hostname
 echo "Exporting hostname..."
-export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-7575}"
+export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-5690}"
 
 # Migrating database
 #echo "Migrating database..."
