@@ -2,8 +2,8 @@
 channel: stable
 addons:
   homepage:
-    repository: has-addons/homepage
+    repository: ha-addons/homepage
     target: homepage
   posterr:
-    repository: has-addons/posterr
+    repository: ha-addons/posterr
     target: posterr
