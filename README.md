@@ -26,3 +26,9 @@ Use the following URL to add this repository:
 https://github.com/dmtg/ha-addons/
 ```
 ### &#10003; [Homepage Dashboard][homepage-addon]
+## 💡 About Homepage
+Homepage is a versatile, self-hosted dashboard that allows you to centralize and manage access to your web services and frequently visited websites. Customize it to create a personal or home hub for easy access to all your essential online resources. Read more about Homepage [here](https://gethomepage.dev/).
+
+### &#10003; [Posterr Server][posterr-addon]
+# Posterr
+## Media display software for Plex, Sonarr, Radarr, and Readarr. (Just like the display screens in movie theatre foyers)
