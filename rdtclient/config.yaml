@@ -1,6 +1,6 @@
 name: "RDTCLIENT"
 description: "Real-Debrid Client Proxy integration for Home Assistant"
-version: "0.09"
+version: "0.210"
 slug: "rdtclient_addon"
 init: false
 arch:
@@ -14,8 +14,4 @@ ports:
 map:
   - share:rw
 volumes:      
-  - /share/rtclient/downloads:/data/downloads # Make sure your local config directory exists
-environment:
-  TZ=Europe/Lisbon    
-  PUID=3
-  PGID=3
+  /share/rtclient/downloads:/data/downloads # Make sure your local config directory exists
