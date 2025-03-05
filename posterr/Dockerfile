@@ -1,4 +1,4 @@
-FROM hub.docker.com/petersem/posterr:latest
+FROM registry.hub.docker.com/library/petersem/posterr:latest
 
 RUN mkdir /usr/src/app/public/custom
 # Copy data for add-on
