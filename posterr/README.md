@@ -191,27 +191,27 @@ MIT
 2. **Run**: Start the add-on to get Homepage up and running on port 3000.
 3. **Access**: Open your browser and navigate to `http://<your-home-assistant-ip>:3000` to access your Homepage dashboard.
 
-Your files are safely backed up to `/share/homepage/configs` in your Home Assistant installation. 
+Your files are safely backed up to `/share/posterr` in your Home Assistant installation. 
 
 ## 🛠 Installation
 
 1. Open your Home Assistant Supervisor paneland go to the Add-on store.
 2. Add this repository URL to your add-on store or you can click this button
 
-    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-homepage-server)
+    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-addons)
 
-3. Install the "Homepage Server" add-on.
+3. Install the "Posterr Server" add-on.
 4. Start the add-on and check the logs to ensure everything is running smoothly.
-5. Access Homepage at `http://<your-home-assistant-ip>:3000`.
+5. Access Posterr at `http://<your-home-assistant-ip>:3000`.
 
 ## Updating
 
-Whenever there's an update to Homepage you can try updating the addon by rebuilding on the addon-page in Home Assistant. However, there is no guarantee that it will work. Please open an issue if you face difficulties after upgrading.
+Whenever there's an update to posterr you can try updating the addon by rebuilding on the addon-page in Home Assistant. However, there is no guarantee that it will work. Please open an issue if you face difficulties after upgrading.
 
 ## 📚 Documentation & Support
 
-For more detailed setup and configuration instructions, visit [Homepage's official documentation](https://gethomepage.dev/docs/about).
+For more detailed setup and configuration instructions, visit [Posterr's official documentation](https://github.com/petersem/posterr).
 
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/dmtg/ha-homepage-server/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/dmtg/ha-addons/issues).
