@@ -2,7 +2,8 @@
 
 # Define paths for Homepage's data
 RDTCLIENT_CONFIG_PATH="/app"
-RDTCLIENT_DATA_PATH="/downloads"
+RDTCLIENT_DATA_PATH="/data/downloads"
+
 # Mapped directories from the host
 PERSISTENT_CONFIG_PATH="/share/rdtclient"
 PERSISTENT_DATA_PATH="/share/rdtclient/downloads"
