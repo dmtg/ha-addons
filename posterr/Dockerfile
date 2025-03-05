@@ -1,4 +1,4 @@
-FROM ghcr.io/petersem/posterr:latest
+FROM registry.hub.docker.com/petersem/posterr:latest
 
 RUN mkdir /usr/src/app/config
 # Copy data for add-on
