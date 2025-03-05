@@ -25,3 +25,4 @@ Use the following URL to add this repository:
 ```txt
 https://github.com/dmtg/ha-addons/
 ```
+### &#10003; [Homepage Dashboard][homepage-addon]
