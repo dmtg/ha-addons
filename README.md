@@ -32,3 +32,19 @@ Homepage is a versatile, self-hosted dashboard that allows you to centralize and
 ### &#10003; [Posterr Server][posterr-addon]
 # Posterr
 ## Media display software for Plex, Sonarr, Radarr, and Readarr. (Just like the display screens in movie theatre foyers)
+
+### &#10003; [Wizarr Server][wizarr-addon]
+# Wizarr
+## Wizarr is an automated user invitation system compatible with Plex, Jellyfin and Emby. You can create a unique link, share it with a user, and they will be invited to your Media Server after they complete the simple signup process!
+
+### &#10003; [RDTCLIENT][rdtclient-addon]
+# RDTCLIENT
+## Real-Debrid Torrent Client
+This is a web interface to manage your torrents on Real-Debrid, AllDebrid, Premiumize TorBox or DebridLink. It supports the following features:
+
+Add new torrents through magnets or files
+Download all files from Real-Debrid, AllDebrid, Premiumize or TorBox to your local machine automatically
+Unpack all files when finished downloading
+Implements a fake qBittorrent API so you can hook up other applications like Sonarr, Radarr or Couchpotato.
+Built with Angular 15 and .NET 9
+You will need a Premium service at Real-Debrid, AllDebrid, Premiumize or Torbox!
