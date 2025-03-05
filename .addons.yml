@@ -10,3 +10,6 @@ addons:
   rdtclient:
     repository: ha-addons/rdtclient
     target: rdtclient
+  Wizarr:
+    repository: ha-addons/wizarr
+    target: wizarr
