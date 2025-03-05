@@ -1,6 +1,6 @@
 name: "Posterr"
 description: "Posterr integration for Home Assistant"
-version: "0.05"
+version: "0.06"
 slug: "posterr_addon"
 init: false
 arch:
