@@ -16,3 +16,5 @@ map:
 volumes:      
   - /share/posterr/configs:/usr/src/app/config # Make sure your local config directory exists
   - /share/posterr/custom:/usr/src/app/public/custom # Make sure your local config directory exists
+environment:
+      TZ: Europe/Lisbon
