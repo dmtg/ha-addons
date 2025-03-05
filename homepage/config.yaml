@@ -1,5 +1,7 @@
 name: "Homepage"
 description: "Homepage integration for Home Assistant"
+url: https://github.com/dmtg/ha-addons/blob/main/homepage/README.md
+webui: http://[HOST]:[PORT:3000]
 version: "0.13"
 slug: "homepage_addon"
 init: false
