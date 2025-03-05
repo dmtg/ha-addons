@@ -14,4 +14,4 @@ ports:
 map:
   - share:rw
 volumes:      
-  - /share/homepage/configs:/app/config # Make sure your local config directory exists
+  /share/wizarr/configs:/data/database # Make sure your local config directory exists
