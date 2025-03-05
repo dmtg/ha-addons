@@ -38,8 +38,8 @@ export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-6500}"
 #cp -n /app/config/default.json /app/data/config/default.json
 
 # Starting Homepage
-echo "Starting production server..."
-node /app/index.js & PID=$!
+#echo "Starting production server..."
+#node /app/index.js & PID=$!
 
 # Wait for Homarr server process to end
 wait $PID
