@@ -4,7 +4,7 @@ Welcome to the **Homepage Server for Home Assistant** repository! This add-on is
 
 ## 🎉 Features
 
-- **Independent Hosting**: Seamlessly runs Homarr as a standalone service within Home Assistant.
+- **Independent Hosting**: Seamlessly runs Homepage as a standalone service within Home Assistant.
 - **Direct Access**: Homepage is available at `http://<your-home-assistant-ip>:3000`.
 - **Persistent Storage**: Configurations and data are preserved across restarts.
 - **Continuous Data Sync**: Regular synchronization ensures data integrity and up-to-date backups.
