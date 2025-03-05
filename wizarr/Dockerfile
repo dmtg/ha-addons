@@ -1,4 +1,4 @@
-FROM ghcr.io/gethomepage/homepage:latest
+FROM ghcr.io/wizarrrr/wizarr:latest
 
 RUN mkdir /app/config
 # Copy data for add-on
