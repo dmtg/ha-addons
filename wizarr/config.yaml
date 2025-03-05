@@ -1,6 +1,6 @@
 name: "wizarr"
 description: "wizarr integration for Home Assistant"
-version: "0.01"
+version: "0.02"
 slug: "wizarr_addon"
 init: false
 arch:
