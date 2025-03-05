@@ -1,6 +1,6 @@
 name: "RDTCLIENT"
 description: "Real-Debrid Client Proxy integration for Home Assistant"
-version: "0.04"
+version: "0.05"
 slug: "rdtclient_addon"
 init: false
 arch:
