@@ -1,23 +1,118 @@
-# 🌐 Home Assistant Add-on: Homepage Server 🚀
+<h1 align="center">Wizarr</h1>
+<h3 align="center">The Free Media Invitation System</h3>
 
-Welcome to the **Homepage Server for Home Assistant** repository! This add-on is designed to host the Homepage dashboard independently within your Home Assistant environment, providing easy and direct access to your self-hosted dashboard.
+---
 
-## 🎉 Features
 
-- **Independent Hosting**: Seamlessly runs Homarr as a standalone service within Home Assistant.
-- **Direct Access**: Homepage is available at `http://<your-home-assistant-ip>:3000`.
-- **Persistent Storage**: Configurations and data are preserved across restarts.
-- **Continuous Data Sync**: Regular synchronization ensures data integrity and up-to-date backups.
+<p align="center">
+<img src="https://raw.githubusercontent.com/Wizarrrr/wizarr/master/apps/wizarr-frontend/src/assets/img/wizard.png" height="200">
+<br/>
+<br/>
+<a href="https://github.com/wizarrrr/wizarr/blob/master/LICENSE.md"><img alt="GPL 2.0 License" src="https://img.shields.io/github/license/wizarrrr/wizarr.svg"/></a>
+<a href="https://github.com/wizarrrr/wizarr/releases"><img alt="Current Release" src="https://img.shields.io/github/release/wizarrrr/wizarr.svg"/></a>
+<a href="https://features.wizarr.dev" style="text-decoration: none"><img alt="Submit Feature Requests" src="https://img.shields.io/badge/vote_now-features?label=features"/></a>
+<a href="https://discord.gg/XXCz7aM3ak"><img alt="Chat on Discord" src="https://img.shields.io/discord/1020742926856372224"/></a>
+<a href="https://www.reddit.com/r/wizarr"><img alt="Join our Subreddit" src="https://img.shields.io/badge/reddit-r%2Fwizarr-%23FF5700.svg"/></a>
+<a href="https://github.com/Wizarrrr/wizarr/issues"><img alt="Github Issue" src="https://img.shields.io/github/issues/wizarrrr/wizarr"/></a>
+<a href="https://github.com/Wizarrrr/wizarr/actions/workflows/master-beta-ci.yml"><img alt="Github Build" src="https://img.shields.io/github/actions/workflow/status/wizarrrr/wizarr/master-beta-ci.yml"/></a>
+</p>
 
-## 💡 About Homepage
-g
-Homepage is a versatile, self-hosted dashboard that allows you to centralize and manage access to your web services and frequently visited websites. Customize it to create a personal or home hub for easy access to all your essential online resources. Read more about Homepage [here](https://gethomepage.dev/).
+---
+
+# WIZARR NOTICE
+
+Wizzar is back in development! You can test the new beta using `ghcr.io/wizarrrr/wizarr:beta` as your image selection. We are working very hard to make Wizarr even better than before! :blush:
+
+If you wish to stay up-to-date with our progress, make sure to join our [Discord](https://discord.gg/XXCz7aM3ak) server and check the `#releases` channel.
+
+---
+
+## What is Wizarr?
+
+Wizarr is an automated user invitation system compatible with Plex, Jellyfin and Emby. You can create a unique link, share it with a user, and they will be invited to your Media Server after they complete the simple signup process!
+
+## Major Features Include
+
+-   Automatic Invitation System to your Media Server (Plex/Jellyfin/Emby)
+-   Support for Passkey authentication for Admin Users
+-   Create multiple invitations with different configurations
+-   Make invitations and users expire after a certain amount of time
+-   Automatically add users to your Requesting System (Jellyseerr/Overseerr)
+-   Invite users to your Discord server through the onboarding process
+-   Multi-Language Support
+-   Multiple Admin Users with different permissions
+-   API for Developers with Swagger UI
+-   Light and Dark Mode Support
+-   Session Management for Admin Users
+-   Scheduled Tasks to keep Wizarr updated with your Media Server
+-   Live logs directly from the Wizarr Web UI
+  
+## Major features to come in V4 will include
+
+-   Customizable onboarding and branding
+-   Added API Endpoints (already partially available)
+-   Plex/Jellyfin/Emby granular user permissions/profiles
+-   Discord invite request integration
+-   Multi-Server Support
+-   SMTP Support for notifications and user invites
+-   OAuth Support with custom providers
+-   2FA Support for Admin Users
+-   Built in Update System
+-   Plugin Store
+-   and much more!
+
+## Getting Started
+
+You can install the stable version of Wizarr by following the instructions below.
+
+```
+docker run -d \
+    --name wizarr \
+    -p 5690:5690 \
+    -v ./wizarr/database:/data/database \
+    ghcr.io/wizarrrr/wizarr:latest
+```
+
+```
+---
+services:
+  wizarr:
+    container_name: wizarr
+    image: ghcr.io/wizarrrr/wizarr:latest
+    ports:
+      - 5690:5690
+    volumes:
+      - ./wizarr/database:/data/database
+```
+
+## Documentation
+
+Check out our documentation for instructions on how to install and run Wizarr!
+[View Documentation](https://github.com/Wizarrrr/wizarr/blob/master/docs/setup/README.md).
+
+If you encounter any issues please don't hesitate to visit our [Discord](https://discord.gg/XXCz7aM3ak) server and ask for help, we would be happy to help.
+
+<a href="https://discord.gg/XXCz7aM3ak">
+<img alt="Chat on Discord" src="https://img.shields.io/discord/1020742926856372224"/>
+</a>
+
+## Contributing
+
+If you wish to contribute to our project you can check out our contributing guide [here](https://github.com/wizarrrr/wizarr/blob/develop/CONTRIBUTING.md).
+
+## Thank you
+
+A big thank you ❤️ to these amazing people for contributing to this project!
+
+<a href="https://github.com/wizarrrr/wizarr/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=wizarrrr/wizarr" />
+</a>
 
 ## 🚀 Quick Start
 
 1. **Install the Add-on**: Add this add-on to your Home Assistant instance from the add-on store.
-2. **Run**: Start the add-on to get Homepage up and running on port 3000.
-3. **Access**: Open your browser and navigate to `http://<your-home-assistant-ip>:3000` to access your Homepage dashboard.
+2. **Run**: Start the add-on to get wizarr up and running on port 3000.
+3. **Access**: Open your browser and navigate to `http://<your-home-assistant-ip>:5690` to access your Homepage dashboard.
 
 Your files are safely backed up to `/share/homepage/configs` in your Home Assistant installation. 
 
@@ -26,20 +121,16 @@ Your files are safely backed up to `/share/homepage/configs` in your Home Assist
 1. Open your Home Assistant Supervisor paneland go to the Add-on store.
 2. Add this repository URL to your add-on store or you can click this button
 
-    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-homepage-server)
+    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-addons)
 
 3. Install the "Homepage Server" add-on.
 4. Start the add-on and check the logs to ensure everything is running smoothly.
-5. Access Homepage at `http://<your-home-assistant-ip>:3000`.
+5. Access Homepage at `http://<your-home-assistant-ip>:5690`.
 
 ## Updating
 
 Whenever there's an update to Homepage you can try updating the addon by rebuilding on the addon-page in Home Assistant. However, there is no guarantee that it will work. Please open an issue if you face difficulties after upgrading.
 
-## 📚 Documentation & Support
-
-For more detailed setup and configuration instructions, visit [Homepage's official documentation](https://gethomepage.dev/docs/about).
-
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/dmtg/ha-homepage-server/issues).
+Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/dmtg/ha-addons/issues).
