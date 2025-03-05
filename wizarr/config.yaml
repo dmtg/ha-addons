@@ -1,6 +1,6 @@
 name: "wizarr"
 description: "wizarr integration for Home Assistant"
-version: "0.02"
+version: "0.03"
 slug: "wizarr_addon"
 init: false
 arch:
@@ -10,7 +10,7 @@ arch:
   - armv7
   - i386
 ports:
-  3000/tcp: 3000
+  5690/tcp: 5690
 map:
   - share:rw
 volumes:      
