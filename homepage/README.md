@@ -25,7 +25,7 @@ Your files are safely backed up to `/share/homepage/configs` in your Home Assist
 1. Open your Home Assistant Supervisor paneland go to the Add-on store.
 2. Add this repository URL to your add-on store or you can click this button
 
-    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-homepage-server)
+    [![Open your Home Assistant instance and show the add add-on repository dialog with a specific repository URL pre-filled.](https://my.home-assistant.io/badges/supervisor_add_addon_repository.svg)](https://my.home-assistant.io/redirect/supervisor_add_addon_repository/?repository_url=https%3A%2F%2Fgithub.com%2Fdmtg%2Fha-addons)
 
 3. Install the "Homepage Server" add-on.
 4. Start the add-on and check the logs to ensure everything is running smoothly.
