@@ -1,0 +1,6 @@
+---
+channel: stable
+addons:
+  homepage:
+    repository: has-addons/homepage
+    target: homepage
