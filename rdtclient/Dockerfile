@@ -1,6 +1,6 @@
-FROM ghcr.io/gethomepage/homepage:latest
+FROM registry.hub.docker.com/rogerfar/rdtclient:latest
 
-RUN mkdir /app/config
+WORKDIR /config
 # Copy data for add-on
 COPY run.sh /app/scripts/
 RUN chmod a+x /app/scripts/run.sh
