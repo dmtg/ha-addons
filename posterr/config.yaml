@@ -1,7 +1,7 @@
-name: "Homepage"
-description: "Homepage integration for Home Assistant"
-version: "0.13"
-slug: "homepage_addon"
+name: "Posterr"
+description: "Posterr integration for Home Assistant"
+version: "0.01"
+slug: "posterr_addon"
 init: false
 arch:
   - aarch64
@@ -14,4 +14,5 @@ ports:
 map:
   - share:rw
 volumes:      
-  - /share/homepage/configs:/app/config # Make sure your local config directory exists
+  - /share/posterr/configs:/usr/src/app/config # Make sure your local config directory exists
+  - /share/posterr/custom:/usr/src/app/public/custom # Make sure your local config directory exists
