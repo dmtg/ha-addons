@@ -1,4 +1,4 @@
-name: "RDTCLIENT"
+name: "Real-Debrid Client"
 description: "Real-Debrid Client Proxy integration for Home Assistant"
 webui: http://[HOST]:[PORT:6500]
 version: "0.12"
