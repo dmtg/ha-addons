@@ -20,4 +20,4 @@ volumes:
 environment:
       TZ: Europe/Lisbon
 schema:
-  HOMEPAGE_ALLOWED_HOSTS: [HOST]:[PORT:3000]
+  HOMEPAGE_ALLOWED_HOSTS: 192.168.1.19:3000
