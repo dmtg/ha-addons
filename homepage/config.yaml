@@ -21,4 +21,4 @@ schema:
   HOMEPAGE_ALLOWED_HOSTS: "str"
 environment:
       TZ: Europe/Lisbon
-      HOMEPAGE_ALLOWED_HOSTS: - /app/config/host.txt
+      HOMEPAGE_ALLOWED_HOSTS: /app/config/host.txt
