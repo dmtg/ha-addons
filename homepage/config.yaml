@@ -18,9 +18,8 @@ map:
 volumes:      
   - /share/homepage/configs:/app/config # Make sure your local config directory exists
 options:
-  HOMEPAGE_ALLOWED_HOSTS: ''
+  HOMEPAGE_ALLOWED_HOSTS: []
 schema:
   HOMEPAGE_ALLOWED_HOSTS: - str
 environment:
       TZ: Europe/Lisbon
-      HOMEPAGE_ALLOWED_HOSTS: []
