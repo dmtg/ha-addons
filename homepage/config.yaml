@@ -2,7 +2,7 @@ name: "Homepage"
 description: "Homepage integration for Home Assistant"
 url: https://gethomepage.dev/
 webui: http://[HOST]:[PORT:3000]
-version: "0.26"
+version: "0.27"
 slug: "homepage_addon"
 init: false
 arch:
@@ -21,4 +21,4 @@ schema:
   HOMEPAGE_ALLOWED_HOSTS: "str"
 environment:
       TZ: Europe/Lisbon
-      HOMEPAGE_ALLOWED_HOSTS: '$HOMEPAGE_ALLOWED_HOSTS'
+      HOMEPAGE_ALLOWED_HOSTS: $HOMEPAGE_ALLOWED_HOSTS
