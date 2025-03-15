@@ -22,3 +22,4 @@ schema:
 environment:
       TZ: Europe/Lisbon
       HOMEPAGE_ALLOWED_HOSTS: 
+        - /app/confi/host.txt
