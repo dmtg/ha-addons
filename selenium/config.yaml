@@ -1,10 +1,6 @@
-name: "Leitura da Agua"
-description: "Leitura da agua CMSC"
-url: https://github.com/rogerfar/rdt-client/blob/master/README.md
-webui: http://[HOST]:[PORT:7900]
-version: "0.02"
-slug: "leitura_agua_bot"
+slug: "selenium_addon"
 init: false
+host_network: true
 arch:
   - aarch64
   - amd64
@@ -12,10 +8,4 @@ arch:
   - armv7
   - i386
 ports:
-  7900/tcp: 7900
-map:
-  - share:rw
-volumes:      
-  /share/leitura_agua/app:/app # Make sure your local config directory exists
-environment:
-      TZ: Europe/Lisbon
+  4444/tcp: 4444
