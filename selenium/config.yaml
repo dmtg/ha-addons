@@ -14,3 +14,5 @@ arch:
   - i386
 ports:
   4444/tcp: 4444
+volumes:
+  - /share/leitura_agua/app:/app
