@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  leitura_agua:
+    image: selenium/standalone-chrome:latest
+    container_name: leitura_agua_bot
+    volumes:
+      - ./app:/app
+    working_dir: /app
+    command: ["python3", "enviar_leitura.py"]
