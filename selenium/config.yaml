@@ -19,4 +19,3 @@ volumes:
   /share/leitura_agua/app:/app # Make sure your local config directory exists
 environment:
       TZ: Europe/Lisbon
-command: ["python3", "enviar_leitura.py"]
