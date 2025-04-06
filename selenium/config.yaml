@@ -2,7 +2,7 @@ name: "Leitura da Agua"
 description: "Leitura da agua CMSC"
 url: https://github.com/rogerfar/rdt-client/blob/master/README.md
 webui: http://[HOST]:[PORT:7900]
-version: "0.01"
+version: "0.02"
 slug: "leitura_agua_bot"
 init: false
 arch:
