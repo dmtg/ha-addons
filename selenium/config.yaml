@@ -16,3 +16,5 @@ ports:
   4444/tcp: 4444
 volumes:
   - /share/leitura_agua/app:/app
+working_dir: /app
+command: ["python3", "enviar_leitura.py"]
