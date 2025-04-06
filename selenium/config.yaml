@@ -1,4 +1,9 @@
-slug: "selenium_addon"
+name: "Leitura da Agua"
+description: "Leitura da agua CMSC"
+url: https://github.com/rogerfar/rdt-client/blob/master/README.md
+webui: http://[HOST]:[PORT:4444]
+version: "0.03"
+slug: "leitura_agua_bot"
 init: false
 host_network: true
 arch:
