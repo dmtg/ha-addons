@@ -13,3 +13,6 @@ addons:
   Wizarr:
     repository: ha-addons/wizarr
     target: wizarr
+  Petio:
+    repository: ha-addons/petio
+    target: petio
