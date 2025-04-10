@@ -1,0 +1,24 @@
+name: "Petio"
+description: "Petio is a third party companion app available to Plex server owners to allow their users to request"
+url: https://github.com/petio-team/petio
+webui: http://[HOST]:[PORT:7777]
+version: "0.1"
+slug: "petio_addon"
+init: false
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+ports:
+  7777/tcp: 7777
+map:
+  - share:rw
+depends_on:
+  - mongo
+volumes:      
+  - /share/petio/configs:/app/api/config # Make sure your local config directory exists
+  - /share/petio/logs:/app/logs # Make sure your local config directory exists
+environment:
+      TZ: Europe/Lisbon
