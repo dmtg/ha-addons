@@ -1,5 +1,3 @@
-#!/bin/sh
-
 # Define paths for Homepage's data
 HOMEPAGE_CONFIG_PATH="/app/config"
 
