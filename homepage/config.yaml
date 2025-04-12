@@ -15,8 +15,12 @@ ports:
   3000/tcp: 3000
 map:
   - share:rw
-volumes:      
+volumes:
   - /share/homepage/configs:/app/config # Make sure your local config directory exists
 environment:
-      TZ: Europe/Lisbon
-      HOMEPAGE_ALLOWED_HOSTS: "*"
+  TZ: Europe/Lisbon
+options:
+  HOMEPAGE_ALLOWED_HOSTS: "*"
+schema:
+  HOMEPAGE_ALLOWED_HOSTS: str
+
