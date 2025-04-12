@@ -1,13 +1,16 @@
 FROM ghcr.io/gethomepage/homepage:latest
 
-# Instalar jq para ler options.json
+# Instalar jq (se ainda não estiver instalado)
 RUN apk add --no-cache jq
 
-# Definir o HOSTNAME como uma variável de ambiente
-ENV HOSTNAME=localhost
+# Criar o diretório onde o script será copiado
+RUN mkdir -p /app/scripts
 
-RUN mkdir /app/config
-COPY run.sh /app/scripts/
+# Copiar o script run.sh para o diretório correto
+COPY run.sh /app/scripts/run.sh
+
+# Garantir que o script tenha permissões de execução
 RUN chmod a+x /app/scripts/run.sh
 
-CMD [ "/app/scripts/run.sh" ]
+# Definir o script como o comando principal ao iniciar o contêiner
+CMD ["/app/scripts/run.sh"]
