@@ -21,6 +21,3 @@ environment:
   TZ: Europe/Lisbon
 options:
   HOMEPAGE_ALLOWED_HOSTS: "*"
-schema:
-  HOMEPAGE_ALLOWED_HOSTS: str
-
