@@ -17,6 +17,7 @@ map:
   - share:rw
 volumes:
   - /share/homepage/configs:/app/config # Make sure your local config directory exists
+  - /share/homepage/options.json:/data/options.json
 environment:
   TZ: Europe/Lisbon
 options:
