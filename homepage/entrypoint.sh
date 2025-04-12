@@ -1,16 +1,16 @@
 #!/bin/bash
 
-# Verificar se a variável HOMEPAGE_ALLOWED_HOSTS está definida, se não, usar o valor padrão "*"
-ALLOWED_HOSTS="${HOMEPAGE_ALLOWED_HOSTS:-*}"
+# Carregar as opções do arquivo options.json
+ALLOWED_HOSTS=$(jq -r '.HOMEPAGE_ALLOWED_HOSTS' /data/options.json)
 
-# Imprimir o valor para verificação
+# Se não for definida, usar o valor padrão "*"
+ALLOWED_HOSTS="${ALLOWED_HOSTS:-*}"
+
+# Imprimir para verificação
 echo "Allowed hosts are set to: ${ALLOWED_HOSTS}"
 
-# Aqui, você pode usar a variável $ALLOWED_HOSTS no seu código, por exemplo, configurando o seu aplicativo
-# Iniciar o servidor ou aplicativo com o valor configurado para allowed hosts
-# Dependendo da estrutura do seu código, você pode passar a variável para o seu app
-# Exemplo:
-# node /app/server.js --allowed-hosts=${ALLOWED_HOSTS}
+# Exemplo de usar a variável em outro comando (por exemplo, no node server)
+# node /app/server.js --allowed-hosts="${ALLOWED_HOSTS}"
 
-# Ou executar outro comando necessário
+# Ou outro comando necessário
 exec "$@"
