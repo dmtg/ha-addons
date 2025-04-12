@@ -28,7 +28,7 @@ sync_to_persistent &
 
 # Exporting hostname
 echo "Exporting hostname..."
-export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-7575}"
+export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-3000}"
 
 # Migrating database
 #echo "Migrating database..."
