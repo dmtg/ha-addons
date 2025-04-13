@@ -2,7 +2,7 @@ name: "Real-Debrid Client"
 description: "Real-Debrid Client Proxy integration for Home Assistant"
 url: https://github.com/rogerfar/rdt-client/blob/master/README.md
 webui: http://[HOST]:[PORT:6500]
-version: "0.14"
+version: "2.0.108"
 slug: "rdtclient_addon"
 init: false
 arch:
