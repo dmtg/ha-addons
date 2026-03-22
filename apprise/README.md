@@ -1,5 +1,7 @@
-Apprise Logo
-ap·prise / verb
+![Apprise Logo](https://raw.githubusercontent.com/caronc/apprise/master/apprise/assets/themes/default/apprise-logo.png)
+<hr/>
+ap·prise / verb<br/>
+
 To inform or tell (someone). To make one aware of something.
 
 Apprise allows you to send a notification to almost all of the most popular notification services available to us today such as: Telegram, Discord, Slack, Amazon SNS, Gotify, etc.
