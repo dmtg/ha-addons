@@ -16,3 +16,6 @@ addons:
   Petio:
     repository: ha-addons/petio
     target: petio
+  Apprise:
+    repository: ha-addons/apprise
+    target: apprise
