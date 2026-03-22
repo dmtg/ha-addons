@@ -27,3 +27,7 @@ options:
 
 schema:
   log_level: list(debug|info|warning|error)
+environment:
+  APPRISE_STATEFUL_MODE: "simple"
+  APPRISE_WORKER_COUNT: "1"
+  APPRISE_ADMIN: "y"
