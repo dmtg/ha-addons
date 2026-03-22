@@ -1,7 +1,5 @@
-#!/bin/sh
+#!/usr/bin/with-contenv bashio
 
-echo "Starting Wizarr..."
+echo "Starting Wizarr (using default entrypoint)..."
 
-export NEXTAUTH_URL_INTERNAL="http://$HOSTNAME:${PORT:-5690}"
-
-exec node /app/server.js
+exec /init
