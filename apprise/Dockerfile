@@ -1,3 +1,1 @@
-FROM caronc/apprise:latest
-
-CMD ["apprise", "--server"]
+FROM caronc/apprise-api:latest
