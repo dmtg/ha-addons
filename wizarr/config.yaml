@@ -19,5 +19,5 @@ volumes:
   /share/wizarr/configs:/data # Make sure your local config directory exists
 environment:
       TZ: Europe/Lisbon
-      PUID=1000 #Set UID
-      PGID=1000 #Set GID
+      PUID: 1000 #Set UID
+      PGID: 1000 #Set GID
