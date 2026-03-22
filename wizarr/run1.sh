@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # Define paths for Homepage's data
-WIZARR_CONFIG_PATH="/data/database"
+WIZARR_CONFIG_PATH="/data"
 
 # Mapped directories from the host
 PERSISTENT_CONFIG_PATH="/share/wizarr/configs"
