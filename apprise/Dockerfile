@@ -1,1 +1,1 @@
-FROM caronc/apprise-api:latest
+FROM caronc/apprise:latest
