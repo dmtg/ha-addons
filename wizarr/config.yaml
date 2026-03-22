@@ -32,3 +32,5 @@ schema:
   PGID: int
   TZ: str
   LOG_LEVEL: list(trace|debug|info|warning|error)
+volumes:      
+  /share/wizarr/configs:/data # Make sure your local config directory exists
