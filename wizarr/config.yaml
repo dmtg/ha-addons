@@ -20,3 +20,15 @@ environment:
       TZ: Europe/Lisbon
 privileged:
   - SYS_ADMIN
+# Opções configuráveis no UI do Home Assistant
+options:
+  PUID: 1000
+  PGID: 1000
+  TZ: Europe/Lisbon
+  LOG_LEVEL: info
+
+schema:
+  PUID: int
+  PGID: int
+  TZ: str
+  LOG_LEVEL: list(trace|debug|info|warning|error)
