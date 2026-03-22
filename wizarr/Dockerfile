@@ -1,6 +1,6 @@
 FROM ghcr.io/wizarrrr/wizarr:latest
 
-WORKDIR /data/database
+WORKDIR /data
 # Copy data for add-on
 COPY run.sh /data/scripts/
 RUN chmod a+x /data/scripts/run.sh
