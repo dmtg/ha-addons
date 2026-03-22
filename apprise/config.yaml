@@ -1,0 +1,29 @@
+name: "Apprise API"
+version: "1.0.0"
+slug: "apprise"
+description: "Apprise notification server for Home Assistant"
+startup: services
+boot: auto
+
+arch:
+  - aarch64
+  - amd64
+  - armhf
+  - armv7
+  - i386
+
+ports:
+  8000/tcp: 8000
+
+webui: http://[HOST]:[PORT:8000]
+
+init: false
+
+map:
+  - config:rw
+
+options:
+  log_level: info
+
+schema:
+  log_level: list(debug|info|warning|error)
