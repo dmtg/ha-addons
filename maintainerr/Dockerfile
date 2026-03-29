@@ -4,3 +4,4 @@ RUN mkdir -p /share/maintainerr
 
 # Garantir permissões
 RUN chmod -R 777 /share/maintainerr
+ln -s /share/maintainerr /opt/data
