@@ -1,1 +1,1 @@
-FROM ghcr.io/maintainerr/maintainerr:3.3.0
+FROM ghcr.io/wizarrrr/wizarr:latest
