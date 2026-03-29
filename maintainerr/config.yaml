@@ -65,7 +65,7 @@ devices:
   - /dev/nvme0
   - /dev/nvme1
   - /dev/nvme2
-image: ghcr.io/alexbelgium/maintainerr-{arch}
+image: ghcr.io/maintainerr/maintainerr:latest-{arch}
 ingress: true
 ingress_stream: true
 init: false
