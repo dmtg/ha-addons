@@ -1,4 +1,4 @@
-name: "wizarr"
+name: "Mantainerr"
 description: "Maintainerr integration for Home Assistant"
 url: https://github.com/dmtg/ha-addons/blob/main/mantainerr/README.md
 webui: http://[HOST]:[PORT:6246]
