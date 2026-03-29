@@ -36,3 +36,8 @@ Maintainerr integrates with:
 ## Data
 
 Persistent data (database, configuration) is stored in the HA addon config directory and survives add-on updates and reinstalls.
+
+## Support
+
+- [Maintainerr upstream project](https://github.com/maintainerr/maintainerr)
+- [Addon repository issues](https://github.com/alexbelgium/hassio-addons/issues)
