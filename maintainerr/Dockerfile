@@ -1,11 +1,6 @@
 FROM ghcr.io/maintainerr/maintainerr:latest
 
-RUN mkdir /opt/data
+COPY run.sh /opt/data/
+RUN chmod a+x /opt/data/run.sh
 
-# copiar script de arranque
-COPY run.sh /run.sh
-
-# não usamos chmod para evitar erros
-# vamos executar com sh diretamente
-
-CMD ["sh", "/run.sh"]
+CMD [ "/opt/data/run.sh" ]
