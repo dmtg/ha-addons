@@ -18,11 +18,10 @@ ports:
   6246/tcp: 6246
 
 map:
-  - addon_configs:rw
-
+  - addon_config:rw
 environment:
   TZ: Europe/Lisbon
-  DATA_DIR: /addon_configs/maintainerr
+
 privileged:
   - SYS_ADMIN
 
