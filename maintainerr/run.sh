@@ -1,11 +1,13 @@
 #!/bin/sh
 
-# criar pasta persistente se não existir
-mkdir -p /addon_configs/maintainerr
+echo "A iniciar Maintainerr com persistência..."
 
-# substituir /opt/data por symlink
+# garantir pasta persistente
+mkdir -p /share/maintainerr
+
+# ligar pasta ao caminho usado pela app (ajustar se necessário)
 rm -rf /opt/data
-ln -s /addon_configs/maintainerr /opt/data
+ln -s /share/maintainerr /opt/data
 
-# arrancar app original
+# arrancar processo original
 exec /init
