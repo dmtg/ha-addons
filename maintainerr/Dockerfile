@@ -1,4 +1,12 @@
 FROM ghcr.io/maintainerr/maintainerr:latest
+
 USER root
-RUN rm -rf /opt/data && ln -s /data /opt/data
-USER 1003:1003
+
+# copiar script de arranque
+COPY run.sh /run.sh
+
+# não usamos chmod para evitar erros
+# vamos executar com sh diretamente
+USER 1003
+
+CMD ["sh", "/run.sh"]
