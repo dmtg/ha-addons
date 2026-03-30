@@ -2,7 +2,7 @@ name: "Mantainerr"
 description: "Maintainerr integration for Home Assistant"
 url: https://github.com/dmtg/ha-addons/blob/main/mantainerr/README.md
 webui: http://[HOST]:[PORT:6246]
-version: "3.3.0.15"
+version: "3.3.0.16"
 slug: "maintainerr_addon"
 init: true
 host_network: true
@@ -19,6 +19,8 @@ ports:
 
 map:
   - addon_configs:rw
+volumes:      
+  /addon_configs/mantainerr:/opt/data # Make sure your local config directory exists
 environment:
   TZ: Europe/Lisbon
 
