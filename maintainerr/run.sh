@@ -2,7 +2,7 @@
 
 echo "A iniciar Maintainerr com persistência..."
 
-PERSISTENT_PATH="/addon_configs/maintainerr"
+PERSISTENT_PATH="/share/maintainerr"
 APP_PATH="/opt/data"
 
 # garantir pasta persistente
