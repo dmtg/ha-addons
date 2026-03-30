@@ -2,7 +2,7 @@ name: "Mantainerr"
 description: "Maintainerr integration for Home Assistant"
 url: https://github.com/dmtg/ha-addons/blob/main/mantainerr/README.md
 webui: http://[HOST]:[PORT:6246]
-version: "3.3.0.4"
+version: "3.3.0.5"
 slug: "maintainerr_addon"
 init: true
 host_network: true
@@ -22,7 +22,7 @@ map:
 
 environment:
   TZ: Europe/Lisbon
-
+  DATA_DIR: /share/maintainerr
 privileged:
   - SYS_ADMIN
 
