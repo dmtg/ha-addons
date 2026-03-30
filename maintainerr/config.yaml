@@ -1,5 +1,5 @@
 name: "Maintainerr"
-version: "3.3.0.1"
+version: "3.3.0.2"
 slug: "maintainerr"
 description: "Rule-based media cleanup for Plex, Jellyfin and Emby"
 url: "https://github.com/Maintainerr/Maintainerr"
