@@ -20,7 +20,7 @@ ports_description:
   6246/tcp: "Maintainerr Web UI"
 
 map:
-  - type: addon_config
+  - type: share
     read_only: false
     path: /opt/data
 
