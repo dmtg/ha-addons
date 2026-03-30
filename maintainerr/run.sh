@@ -1,13 +1,13 @@
 #!/bin/sh
 
-echo "A iniciar Maintainerr com persistência..."
+echo "A iniciar Maintainerr..."
 
-# garantir pasta persistente
-mkdir -p /addon_configs/maintainerr
+PERSISTENT_PATH="/addon_configs/maintainerr"
+APP_PATH="/opt/data"   # confirmar depois se necessário
 
-# ligar pasta ao caminho usado pela app (ajustar se necessário)
-rm -rf /opt/data
-ln -s /addon_configs/maintainerr /opt/data
+mkdir -p $PERSISTENT_PATH
 
-# arrancar processo original
+rm -rf $APP_PATH
+ln -s $PERSISTENT_PATH $APP_PATH
+
 exec /init
