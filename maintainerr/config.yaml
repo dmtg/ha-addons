@@ -18,9 +18,10 @@ ports:
   6246/tcp: 6246
 
 map:
-type: data
-path: /opt/data
-read_only: false
+  - type: data
+    path: /opt/data
+    read_only: false
+
 environment:
   TZ: Europe/Lisbon
 
