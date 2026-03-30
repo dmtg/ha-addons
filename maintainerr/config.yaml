@@ -18,7 +18,7 @@ ports:
   6246/tcp: 6246
 
 map:
-  - share:rw
+  - addon_configs:rw
 environment:
   TZ: Europe/Lisbon
 
