@@ -1,5 +1,5 @@
 name: "Maintainerr"
-version: "3.3.0"
+version: "3.3.0.1"
 slug: "maintainerr"
 description: "Rule-based media cleanup for Plex, Jellyfin and Emby"
 url: "https://github.com/Maintainerr/Maintainerr"
@@ -27,7 +27,8 @@ map:
 environment:
   TZ: "Europe/Lisbon"
   LOG_LEVEL: info
-
+  - PUID=1000
+  - PGID=1000
 schema:
   TZ: str
   LOG_LEVEL: list(trace|debug|info|warning|error)
