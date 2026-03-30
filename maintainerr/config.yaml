@@ -26,13 +26,9 @@ privileged:
   - SYS_ADMIN
 
 options:
-  PUID: 1000
-  PGID: 1000
   TZ: Europe/Lisbon
   LOG_LEVEL: info
 
 schema:
-  PUID: int
-  PGID: int
   TZ: str
   LOG_LEVEL: list(trace|debug|info|warning|error)
