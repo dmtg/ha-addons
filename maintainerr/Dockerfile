@@ -1,12 +1,8 @@
 FROM ghcr.io/maintainerr/maintainerr:latest
 
-USER root
+WORKDIR /opt/data
+# Copy data for add-on
+COPY run.sh /opt/data/scripts/
+RUN chmod a+x /opt/data/scripts/run.sh
 
-# copiar script de arranque
-COPY run.sh /run.sh
-
-# não usamos chmod para evitar erros
-# vamos executar com sh diretamente
-USER 1003
-
-CMD ["sh", "/run.sh"]
+CMD [ "/opt/data/scripts/run.sh" ]
