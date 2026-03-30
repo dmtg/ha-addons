@@ -27,8 +27,8 @@ map:
 environment:
   TZ: "Europe/Lisbon"
   LOG_LEVEL: info
-  - PUID=1000
-  - PGID=1000
+  PUID: 1000
+  PGID: 1000
 schema:
   TZ: str
   LOG_LEVEL: list(trace|debug|info|warning|error)
