@@ -1,34 +1,31 @@
-name: "Mantainerr"
-description: "Maintainerr integration for Home Assistant"
-url: https://github.com/dmtg/ha-addons/blob/main/mantainerr/README.md
-webui: http://[HOST]:[PORT:6246]
-version: "3.3.0.22"
-slug: "maintainerr_addon"
-init: true
-host_network: true
+name: "Maintainerr"
+version: "3.3.0"
+slug: "maintainerr"
+description: "Rule-based media cleanup for Plex, Jellyfin and Emby"
+url: "https://github.com/Maintainerr/Maintainerr"
+startup: application
+boot: auto
+init: false
 
 arch:
-  - aarch64
   - amd64
-  - armhf
-  - armv7
-  - i386
+  - aarch64
+
+webui: "http://[HOST]:[PORT:6246]"
 
 ports:
   6246/tcp: 6246
 
-map:
-  - share:rw
-volumes:      
-  /share/mantainerr:/opt/data # Make sure your local config directory exists
-environment:
-  TZ: Europe/Lisbon
+ports_description:
+  6246/tcp: "Maintainerr Web UI"
 
-privileged:
-  - SYS_ADMIN
-user: '1000:1000'
-options:
-  TZ: Europe/Lisbon
+map:
+  - type: addon_config
+    read_only: false
+    path: /opt/data
+
+environment:
+  TZ: "Europe/Lisbon"
   LOG_LEVEL: info
 
 schema:
