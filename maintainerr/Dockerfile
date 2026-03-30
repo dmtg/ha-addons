@@ -1,6 +1,6 @@
 FROM ghcr.io/maintainerr/maintainerr:latest
 
-USER root
+RUN mkdir /opt/data
 
 # copiar script de arranque
 COPY run.sh /run.sh
