@@ -7,6 +7,5 @@ COPY run.sh /run.sh
 
 # não usamos chmod para evitar erros
 # vamos executar com sh diretamente
-USER 1000
 
 CMD ["sh", "/run.sh"]
