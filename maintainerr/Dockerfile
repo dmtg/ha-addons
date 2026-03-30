@@ -1,9 +1,13 @@
 FROM ghcr.io/maintainerr/maintainerr:latest
 
-# mudar para root para poder copiar e dar permissões
 USER root
 
+# copiar script de arranque
 COPY run.sh /run.sh
-RUN chmod +x /run.sh
 
-CMD ["/run.sh"]
+# não usamos chmod para evitar erros
+# vamos executar com sh diretamente
+
+USER 1000
+
+CMD ["sh", "/run.sh"]
