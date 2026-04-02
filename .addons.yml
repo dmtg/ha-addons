@@ -19,6 +19,3 @@ addons:
   Apprise:
     repository: ha-addons/apprise
     target: apprise
-#  Maintainerr:
-#    repository: ha-addons/maintainerr
-#   target: maintainerr
