@@ -1,0 +1,10 @@
+#!/usr/bin/with-contenv bashio
+
+CONFIG_PATH="/config"
+
+echo "Mounting Seerr config..."
+
+mkdir -p "$CONFIG_PATH"
+mkdir -p /app/config
+
+mount --bind "$CONFIG_PATH" /app/config
