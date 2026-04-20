@@ -19,3 +19,6 @@ addons:
   Apprise:
     repository: ha-addons/apprise
     target: apprise
+  Seerr:
+    repository: ha-addons/seerr
+    target: seerr
