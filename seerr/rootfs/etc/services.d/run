@@ -1,0 +1,15 @@
+#!/usr/bin/with-contenv bashio
+
+CONFIG_PATH="/config"
+
+TZ="$(bashio::config 'TZ')"
+export TZ
+
+echo "Starting Seerr with TZ=$TZ"
+
+mkdir -p "$CONFIG_PATH/logs"
+
+rm -rf /app/config
+ln -s "$CONFIG_PATH" /app/config
+
+exec node dist/index.js
