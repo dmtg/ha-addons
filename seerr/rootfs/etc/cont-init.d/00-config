@@ -7,4 +7,4 @@ echo "Mounting Seerr config..."
 mkdir -p "$CONFIG_PATH"
 mkdir -p /app/config
 
-mount --bind "$CONFIG_PATH" /app/config
+mount --bind "$CONFIG_PATH" /app/config || echo "MOUNT FAILED"
