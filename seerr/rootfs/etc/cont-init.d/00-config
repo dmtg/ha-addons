@@ -8,8 +8,7 @@ echo "Using config path: $CONFIG_PATH"
 mkdir -p "$CONFIG_PATH"
 mkdir -p "$CONFIG_PATH/logs"
 
-rm -rf /app/config
-mkdir -p /app/config
-
-# bind real
-mount --bind "$CONFIG_PATH" /app/config || echo "Mount failed"
+# copiar config inicial se não existir
+if [ ! -f "$CONFIG_PATH/settings.json" ]; then
+    cp -r /app/config/* "$CONFIG_PATH/" 2>/dev/null || true
+fi
