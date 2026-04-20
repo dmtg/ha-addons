@@ -2,4 +2,4 @@ FROM ghcr.io/seerr-team/seerr:latest
 
 COPY --chmod=755 run.sh /run.sh
 
-CMD [ "/run.sh" ]
+ENTRYPOINT [ "/run.sh" ]
