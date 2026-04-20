@@ -1,4 +1,4 @@
-#!/usr/bin/with-contenv bashio
+#!/bin/sh
 
 CONFIG_PATH="/share/seerr/configs"
 
@@ -10,4 +10,4 @@ ln -s "$CONFIG_PATH" /app/config
 
 echo "Starting Seerr..."
 
-exec /app/seerr
+exec node dist/index.js
