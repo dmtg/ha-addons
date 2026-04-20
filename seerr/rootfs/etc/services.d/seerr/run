@@ -7,9 +7,14 @@ export TZ
 
 echo "Starting Seerr with TZ=$TZ"
 
+mkdir -p "$CONFIG_PATH"
 mkdir -p "$CONFIG_PATH/logs"
 
-rm -rf /app/config
-ln -s "$CONFIG_PATH" /app/config
+# ⚠️ montar /config como /app/config (bind mount real)
+if ! mountpoint -q /app/config; then
+    rm -rf /app/config
+    mkdir -p /app/config
+    mount --bind "$CONFIG_PATH" /app/config
+fi
 
 exec node dist/index.js
