@@ -3,6 +3,19 @@
 TZ="$(bashio::config 'TZ')"
 export TZ
 
+ADDON_SLUG="$(bashio::addon.slug)"
+CONFIG_PATH="/addon_configs/${ADDON_SLUG}"
+
 echo "Starting Seerr..."
 
-exec node dist/index.js
+# copiar config para dentro do container
+rm -rf /app/config
+cp -r "$CONFIG_PATH" /app/config
+
+node dist/index.js &
+
+# sincronizar de volta continuamente
+while true; do
+    sleep 20
+    cp -r /app/config/* "$CONFIG_PATH/" 2>/dev/null
+done
