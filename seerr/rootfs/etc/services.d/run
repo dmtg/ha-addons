@@ -3,19 +3,18 @@
 TZ="$(bashio::config 'TZ')"
 export TZ
 
-ADDON_SLUG="$(bashio::addon.slug)"
-CONFIG_PATH="/addon_configs/${ADDON_SLUG}"
+CONFIG_PATH="/share/seerr/config"
+
+echo "Using config at $CONFIG_PATH"
+
+# criar estrutura se não existir (não falha se já existir)
+mkdir -p "$CONFIG_PATH"
+mkdir -p "$CONFIG_PATH/logs"
+
+# apontar Seerr para /share
+rm -rf /app/config
+ln -s "$CONFIG_PATH" /app/config
 
 echo "Starting Seerr..."
 
-# copiar config para dentro do container
-rm -rf /app/config
-cp -r "$CONFIG_PATH" /app/config
-
-node dist/index.js &
-
-# sincronizar de volta continuamente
-while true; do
-    sleep 20
-    cp -r /app/config/* "$CONFIG_PATH/" 2>/dev/null
-done
+exec node dist/index.js
