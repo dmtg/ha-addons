@@ -3,6 +3,6 @@
 TZ="$(bashio::config 'TZ')"
 export TZ
 
-echo "Starting Seerr with TZ=$TZ"
+echo "Starting Seerr..."
 
 exec node dist/index.js
