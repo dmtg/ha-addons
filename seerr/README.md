@@ -1,6 +1,6 @@
-# 🌐 Home Assistant Add-on: Homepage Server 🚀
+# 🌐 Home Assistant Add-on: Seerr Server 🚀
 
-Welcome to the **Homepage Server for Home Assistant** repository! This add-on is designed to host the Homepage dashboard independently within your Home Assistant environment, providing easy and direct access to your self-hosted dashboard.
+Welcome to the **Seerr Server for Home Assistant** repository! This add-on is designed to host the Seerr dashboard independently within your Home Assistant environment, providing easy and direct access to your self-hosted dashboard.
 
 ## 🎉 Features
 
