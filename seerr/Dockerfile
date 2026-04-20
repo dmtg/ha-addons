@@ -1,5 +1,7 @@
 FROM ghcr.io/seerr-team/seerr:latest
 
-COPY --chmod=755 run.sh /run.sh
+WORKDIR /app
 
-ENTRYPOINT [ "/run.sh" ]
+COPY --chmod=755 run.sh ./run.sh
+
+ENTRYPOINT [ "/app/run.sh" ]
