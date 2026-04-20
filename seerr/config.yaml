@@ -19,5 +19,8 @@ url: "https://seerr.dev/"
 
 startup: services
 boot: auto
-environment:
-      TZ: Europe/Lisbon
+options:
+  TZ: "Europe/Lisbon"
+
+schema:
+  TZ: str
