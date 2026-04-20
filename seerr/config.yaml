@@ -2,7 +2,7 @@ name: "Seerr"
 description: "Seerr integration for Home Assistant"
 url: https://seerr.dev/
 webui: http://[HOST]:[PORT:5055]
-version: "3.2.0.9"
+version: "3.2.0.10"
 slug: "seerr_addon"
 init: false
 arch:
