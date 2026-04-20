@@ -1,10 +1,15 @@
 #!/usr/bin/with-contenv bashio
 
-CONFIG_PATH="/config"
+ADDON_SLUG="$(bashio::addon.slug)"
+CONFIG_PATH="/addon_configs/${ADDON_SLUG}"
 
-echo "Mounting Seerr config..."
+echo "Using config path: $CONFIG_PATH"
 
 mkdir -p "$CONFIG_PATH"
+mkdir -p "$CONFIG_PATH/logs"
+
+# mount real para o Seerr
+rm -rf /app/config
 mkdir -p /app/config
 
-mount --bind "$CONFIG_PATH" /app/config || echo "MOUNT FAILED"
+mount --bind "$CONFIG_PATH" /app/config || echo "Mount failed"
