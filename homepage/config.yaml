@@ -1,8 +1,8 @@
 name: "Homepage"
 description: "Homepage integration for Home Assistant"
 url: https://gethomepage.dev/
-webui: http://[HOST]:[PORT]
-version: "2.0.0.1"
+webui: http://[HOST]:[PORT]:3000
+version: "2.0.0"
 slug: "homepage_addon"
 init: false
 arch:
