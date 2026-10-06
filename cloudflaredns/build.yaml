@@ -1,3 +1,3 @@
 build_from:
-  amd64: "timothymiller/cloudflare-ddns::latest"
-  aarch64: "timothymiller/cloudflare-ddns::latest"
+  amd64: "timothyjmiller/cloudflare-ddns:latest"
+  aarch64: "timothyjmiller/cloudflare-ddns:latest"
