@@ -1,7 +1,7 @@
-name: Cloudflare DDNS
+name: "Cloudflare DDNS"
 version: "2.2.0"
-slug: cloudflare_ddns
-description: Atualiza automaticamente registos DNS da Cloudflare com o IP público.
+slug: "cloudflare_ddns"
+description: "Atualiza automaticamente registos DNS da Cloudflare com o IP público."
 url: https://github.com/timothymiller/cloudflare-ddns
 startup: services
 boot: auto
