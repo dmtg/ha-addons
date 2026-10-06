@@ -1,3 +1,4 @@
+FROM timothyjmiller/cloudflare-ddns:latest
 ARG BUILD_FROM
 FROM ${BUILD_FROM}
 
