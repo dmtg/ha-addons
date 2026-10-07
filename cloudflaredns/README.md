@@ -1,6 +1,6 @@
 # Cloudflare DDNS
 
-Home Assistant App baseado no projeto `timothymiller/cloudflare-ddns`.
+Home Assistant App baseado no projeto `timothyjmiller/cloudflare-ddns`.
 
 Configuração predefinida:
 - IPv4 via Cloudflare Trace
