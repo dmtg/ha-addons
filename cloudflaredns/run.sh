@@ -521,6 +521,10 @@ interval_to_seconds() {
 
     local value="$1"
 
+    # Aceita o formato Go duration usado na configuração do add-on:
+    # "@every 5m". O prefixo @every é ignorado para o sleep local.
+    value="${value#@every }"
+
     case "$value" in
 
         *s)
