@@ -5,7 +5,7 @@ set -e
 CONFIG="/data/options.json"
 
 log() {
-    echo "[Cloudflare DDNS] $1"
+    echo "[$(date '+%d/%m/%Y %H:%M:%S')] [Cloudflare DDNS] $1"
 }
 
 # Ler configuração
