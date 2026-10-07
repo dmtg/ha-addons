@@ -2,7 +2,7 @@ name: "wizarr"
 description: "Wizarr integration for Home Assistant"
 url: "https://github.com/dmtg/ha-addons/blob/main/wizarr/README.md"
 webui: "http://[HOST]:[PORT:5690]"
-version: "2026.9.1.6"
+version: "2026.9.1.7"
 slug: "wizarr_addon"
 
 init: true
@@ -38,5 +38,6 @@ schema:
   PGID: int
   TZ: str
   LOG_LEVEL: list(trace|debug|info|warning|error)
+
 volumes:
-  /share/wizarr/configs:/data
+  /share/wizarr/configs/database:/data/database
