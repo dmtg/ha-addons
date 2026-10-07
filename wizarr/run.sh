@@ -13,5 +13,8 @@ echo "✅ Configuração copiada."
 
 echo "🚀 A iniciar Wizarr..."
 
-cd /app
-exec .venv/bin/python run.py
+exec /usr/local/bin/docker-entrypoint.sh \
+    uv run --frozen --no-dev gunicorn \
+    --config gunicorn.conf.py \
+    --umask 007 \
+    run:app
