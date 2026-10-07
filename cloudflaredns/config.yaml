@@ -1,0 +1,39 @@
+name: "Cloudflare DDNS"
+version: "2.2.0.0"
+slug: "cloudflare_ddns"
+description: "Cloudflare DDNS para Home Assistant"
+url: https://github.com/timothymiller/cloudflare-ddns
+startup: services
+boot: auto
+init: false
+host_network: true
+apparmor: false
+arch:
+  - amd64
+  - aarch64
+
+options:
+  cloudflare_api_token: ""
+  ip4_domains: ""
+  proxied: ""
+  ip4_provider: "cloudflare.trace"
+  ip6_provider: "none"
+  update_cron: "@every 5m"
+  update_on_start: true
+  ttl: 1
+  delete_on_stop: false
+  delete_on_failure: false
+  emoji: true
+
+schema:
+  cloudflare_api_token: password
+  ip4_domains: str
+  proxied: str
+  ip4_provider: str
+  ip6_provider: str
+  update_cron: str
+  update_on_start: bool
+  ttl: int
+  delete_on_stop: bool
+  delete_on_failure: bool
+  emoji: bool
