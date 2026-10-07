@@ -1,0 +1,25 @@
+configuration:
+  cloudflare_api_token:
+    name: Cloudflare API Token
+    description: API Token with Zone DNS Edit permission.
+  ip4_domains:
+    name: IPv4 domains
+    description: Comma-separated DNS names to update.
+  proxied:
+    name: Proxied domains expression
+    description: Cloudflare proxy expression.
+  update_cron:
+    name: Update interval
+    description: Cron-style interval used by the DDNS container.
+  update_on_start:
+    name: Update on start
+  ip6_provider:
+    name: IPv6 provider
+  ttl:
+    name: TTL
+  delete_on_stop:
+    name: Delete on stop
+  delete_on_failure:
+    name: Delete on failure
+  emoji:
+    name: Emoji logging
