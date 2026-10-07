@@ -10,10 +10,8 @@ fi
 
 echo "✅ Configuração copiada."
 
-if [ -f /app/server.js ]; then
-    echo "🚀 A iniciar Wizarr através de /app/server.js..."
-    exec node /app/server.js
-fi
+echo "🔎 A procurar o ficheiro que inicia o Wizarr..."
 
-echo "❌ /app/server.js não existe."
+find / -type f \( -name "run.py" -o -name "app.py" -o -name "main.py" -o -name "wsgi.py" \) 2>/dev/null
+
 exit 1
