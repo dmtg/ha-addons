@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/usr/bin/env sh
+set -eu
 
 echo "🔧 A preparar a configuração persistente do Wizarr..."
 
@@ -10,8 +11,7 @@ fi
 
 echo "✅ Configuração copiada."
 
-echo "🔎 A procurar o ficheiro que inicia o Wizarr..."
+echo "🚀 A iniciar Wizarr..."
 
-find / -type f \( -name "run.py" -o -name "app.py" -o -name "main.py" -o -name "wsgi.py" \) 2>/dev/null
-
-exit 1
+cd /app
+exec .venv/bin/python run.py
