@@ -1,0 +1,38 @@
+#!/usr/bin/with-contenv bashio
+
+PERSISTENT="/share/wizarr/configs"
+DATA="/data"
+
+echo "[wizarr-data] Preparing persistent storage..."
+
+mkdir -p "$PERSISTENT"
+
+# Se já existir um link simbólico correto, não fazer nada
+if [ -L "$DATA" ]; then
+    TARGET="$(readlink "$DATA")"
+
+    if [ "$TARGET" = "$PERSISTENT" ]; then
+        echo "[wizarr-data] /data already points to persistent storage."
+        exit 0
+    fi
+
+    rm -f "$DATA"
+fi
+
+# Se ainda houver dados locais no /data e a pasta persistente estiver vazia,
+# preservá-los antes de mudar para o armazenamento persistente.
+if [ -d "$DATA" ] && [ "$(find "$DATA" -mindepth 1 -maxdepth 1 2>/dev/null | head -n 1)" ]; then
+    if [ -z "$(find "$PERSISTENT" -mindepth 1 -maxdepth 1 2>/dev/null | head -n 1)" ]; then
+        echo "[wizarr-data] Copying existing Wizarr data to persistent storage..."
+        cp -a "$DATA"/. "$PERSISTENT"/
+    else
+        echo "[wizarr-data] Persistent storage already contains data."
+    fi
+
+    rm -rf "$DATA"
+fi
+
+ln -s "$PERSISTENT" "$DATA"
+
+echo "[wizarr-data] Persistent storage ready:"
+echo "[wizarr-data] /data -> $PERSISTENT"
