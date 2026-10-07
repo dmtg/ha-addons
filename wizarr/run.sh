@@ -1,16 +1,13 @@
-#!/usr/bin/env bashio
+#!/usr/bin/env bash
 
-PERSISTENT="/share/wizarr/configs"
+echo "🔧 A preparar a configuração persistente do Wizarr..."
 
-echo "[wizarr-copy] A copiar dados atuais..."
+mkdir -p /share/wizarr/configs
 
-mkdir -p "$PERSISTENT"
+# Copiar a configuração existente do Wizarr para a pasta persistente
+if [ -d /data ]; then
+    cp -a /data/. /share/wizarr/configs/
+fi
 
-cp -a /data/. "$PERSISTENT"/
-
-echo "[wizarr-copy] Conteúdo copiado:"
-ls -lah "$PERSISTENT"
-
-echo "[wizarr-copy] Cópia concluída."
-
+# Garantir que o Wizarr continua a arrancar
 exec /init
