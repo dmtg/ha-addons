@@ -1,15 +1,28 @@
 #!/usr/bin/env sh
 set -eu
 
-echo "🔧 A preparar a configuração persistente do Wizarr..."
+PERSISTENT="/share/wizarr/configs"
+DATA="/data"
 
-mkdir -p /share/wizarr/configs
+echo "🔧 A preparar configuração persistente do Wizarr..."
 
-if [ -d /data ]; then
-    cp -a /data/. /share/wizarr/configs/
+mkdir -p "$PERSISTENT"
+mkdir -p "$DATA"
+
+# Recuperar dados persistentes existentes
+if [ -n "$(ls -A "$PERSISTENT" 2>/dev/null)" ]; then
+    echo "📥 A recuperar dados de $PERSISTENT para $DATA..."
+    cp -a "$PERSISTENT"/. "$DATA"/
 fi
 
-echo "✅ Configuração copiada."
+echo "💾 A ativar sincronização automática..."
+
+(
+    while true; do
+        sleep 60
+        cp -a "$DATA"/. "$PERSISTENT"/
+    done
+) &
 
 echo "🚀 A iniciar Wizarr..."
 
