@@ -8,4 +8,6 @@ if [ -d /data ]; then
     cp -a /data/. /share/wizarr/configs/
 fi
 
+echo "✅ Configuração copiada."
+
 exec /init
