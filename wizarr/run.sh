@@ -10,4 +10,10 @@ fi
 
 echo "✅ Configuração copiada."
 
-exec /init
+if [ -f /app/server.js ]; then
+    echo "🚀 A iniciar Wizarr através de /app/server.js..."
+    exec node /app/server.js
+fi
+
+echo "❌ /app/server.js não existe."
+exit 1
