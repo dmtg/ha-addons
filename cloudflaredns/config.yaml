@@ -1,5 +1,5 @@
 name: "Cloudflare DDNS"
-version: "2.2.0.9"
+version: "2.2.0.0"
 slug: "cloudflare_ddns"
 description: "Cloudflare DDNS para Home Assistant"
 url: https://github.com/timothymiller/cloudflare-ddns
