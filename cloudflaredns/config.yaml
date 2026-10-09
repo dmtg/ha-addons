@@ -1,5 +1,5 @@
 name: "Cloudflare DDNS"
-version: "2.2.0.2.1"
+version: "2.2.0.2.2"
 slug: "cloudflare_ddns"
 description: "Cloudflare DDNS para Home Assistant"
 url: https://github.com/timothymiller/cloudflare-ddns
@@ -26,6 +26,9 @@ options:
   delete_on_stop: false
   delete_on_failure: false
   emoji: true
+  telegram_enabled: false
+  telegram_bot_token: ""
+  telegram_chat_id: ""
 
 schema:
   cloudflare_api_token: password
@@ -41,3 +44,7 @@ schema:
   delete_on_stop: bool
   delete_on_failure: bool
   emoji: bool
+  telegram_enabled: bool
+  telegram_bot_token: password
+  telegram_chat_id: str
+  
