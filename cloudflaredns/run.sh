@@ -28,6 +28,7 @@ TTL="$(jq -r '.ttl // 1' "$CONFIG")"
 TELEGRAM_ENABLED="$(jq -r '.telegram_enabled // false' "$CONFIG")"
 TELEGRAM_BOT_TOKEN="$(jq -r '.telegram_bot_token // ""' "$CONFIG")"
 TELEGRAM_CHAT_ID="$(jq -r '.telegram_chat_id // ""' "$CONFIG")"
+TELEGRAM_TEST_ON_START="$(jq -r '.telegram_test_on_start // false' "$CONFIG")"
 
 notify_telegram() {
     local message="$1"
@@ -55,6 +56,11 @@ notify_telegram() {
     fi
     return 0
 }
+
+# Teste opcional das notificações Telegram no arranque
+if [ "$TELEGRAM_TEST_ON_START" = "true" ]; then
+    notify_telegram "✅ Cloudflare DDNS: teste de notificações Telegram concluído."
+fi
 
 if [ -z "$API_TOKEN" ]; then
     log "ERRO: Cloudflare API Token não configurado."
