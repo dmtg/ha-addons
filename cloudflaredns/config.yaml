@@ -46,7 +46,6 @@ schema:
   delete_on_failure: bool
   emoji: bool
   telegram_enabled: bool
+  telegram_test_on_start: bool
   telegram_bot_token: password
   telegram_chat_id: str
-  telegram_test_on_start: bool
-    
